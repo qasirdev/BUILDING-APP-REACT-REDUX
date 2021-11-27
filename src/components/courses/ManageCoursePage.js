@@ -8,7 +8,9 @@ import { newCourse } from "../../../tools/mockData";
 import Spinner from "../common/Spinner";
 import { toast } from "react-toastify";
 
-function MangeCoursePage({
+//export un-connected function which could be import in ManageCoursePage.test.js like
+// import { ManageCoursePage } from "./ManageCoursePage";
+export function ManageCoursePage({
   courses,
   authors,
   loadCourses,
@@ -85,7 +87,7 @@ function MangeCoursePage({
   );
 }
 
-MangeCoursePage.propTypes = {
+ManageCoursePage.propTypes = {
   course: PropTypes.object.isRequired,
   courses: PropTypes.array.isRequired,
   authors: PropTypes.array.isRequired,
@@ -117,5 +119,6 @@ const mapDispatchToProps = {
   saveCourse: courseActions.saveCourse,
   loadAuthors: authorActions.loadAuthors,
 };
-
-export default connect(mapStateToProps, mapDispatchToProps)(MangeCoursePage);
+//export connected function as default which could be import in App.js like
+//import ManageCoursePage from "./courses/ManageCoursePage";
+export default connect(mapStateToProps, mapDispatchToProps)(ManageCoursePage);

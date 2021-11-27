@@ -14,7 +14,7 @@ function renderCourseForm(args) {
   };
 
   const props = { ...defaultProps, ...args };
-  return shallow(<CourseForm {...props} />);
+  return shallow(<CourseForm {...props} />); //shallow- don't create DOM
 }
 
 it("renders form and header", () => {
