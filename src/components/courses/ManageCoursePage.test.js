@@ -3,6 +3,7 @@ import React from "react";
 import { mount } from "enzyme";
 import { authors, newCourse, courses } from "../../../tools/mockData";
 import { ManageCoursePage } from "./ManageCoursePage";
+import "../../../tools/testSetup";
 
 function render(args) {
   const defaultProps = {
